@@ -49,6 +49,8 @@ void loop() {
     UD_Blink();                   // 위쪽, 아래쪽 노란불 점멸
     LR_GreOn();                   // 왼쪽, 오른쪽 신호 변경
     delay(15000);                 // 초록불 점등 시간(15초)
+    LR_Blink();                   // 왼쪽, 오른쪽 노란불 점멸
+    prevT = millis();             // 현재 시간을 이전 시간 변수에 저장
   }
   
   if(millis() - prevT >= 3*interval) {    // ( 현재 시간 - 이전 시간 ) >= 초록불 점등 시간(15초)
